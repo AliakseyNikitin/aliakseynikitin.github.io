@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aillion</title>
+  <link rel="icon" href="logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Open Sans', sans-serif;
+      background-image: url('band.jfif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+      transition: all 0.3s ease;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h4 {
+      margin-top: 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      text-align: left;
+      color: #ff6347;
+      font-size: 32px;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+      padding-bottom: 5px;
+    }
+
+    p, li {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+      max-width: 1000px;
+      opacity: 0;
+      animation: fadeIn 1s 0.3s forwards;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a.button-link {
+      display: inline-block;
+      text-decoration: none;
+      background: #ff6347;
+      color: #fff;
+      padding: 12px 25px;
+      margin-top: 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      animation: fadeIn 1s 0.6s forwards;
+    }
+
+    a.button-link:hover {
+      background: #e5533c;
+      transform: scale(1.05);
+    }
+
+    a.button-link:active {
+      transform: scale(0.98);
+    }
+
+    /* Верхняя навигация */
+    .block-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      z-index: 10;
+      background: rgba(0,0,0,0.3);
+      animation: fadeIn 1s 0.3s forwards;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.168);
+      border-radius: 10px;
+      padding: 8px 15px;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .container:hover {
+      background-color: rgba(255, 255, 255, 0.433);
+      transform: translateY(-3px);
+    }
+
+    .member {
+      overflow: hidden;
+      margin-bottom: 50px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .members-list {
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .image-right {
+      float: right;
+      margin-left: 25px;
+      margin-bottom: 20px;
+      width: 180px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-right:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 16px rgba(255, 255, 255, 0.6);
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: #ffd166;
+    }
+
+    a {
+      color: #a7d8ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @media (max-width: 768px) {
+      body {padding: 20px 10px;}
+      p, li {font-size: 16px;}
+      h1 {font-size: 24px;}
+      .block-container {flex-direction: column; gap: 10px; align-items: center;}
+      .container {padding: 8px 12px;}
+      a.button-link {width: 100%; text-align: center; box-sizing: border-box;}
+      .image-right {float: none; display: block; margin: 0 auto 15px auto; width: 70%; max-width: 250px;}
+      h1, h2, h4, p {text-align: center;}
+      .member {text-align: center;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Якорь для возврата наверх -->
+  <div id="top"></div>
+
+  <!-- Верхняя навигация -->
+  <div class="block-container">
+    <a href="#history" class="container"><h3>О группе</h3></a>
+    <a href="#members" class="container"><h3>Участники</h3></a>
+    <a href="https://music.yandex.by/artist/674324" target="_blank" class="container"><h3>Музыка</h3></a>
+    <a href="https://www.youtube.com/@Aillion" target="_blank" class="container"><h3>Видео</h3></a>
+  </div>
+
+  <!-- История группы -->
+  <h1 id="history">Aillion</h1>
+
+  <p><strong>О НАЗВАНИИ «AILLION»</strong><br><br>
+    Старинное слово EL («эль») использовалось как собирательное название Бога или высшего существа (например, Эль-Элион или Эль-Шадаи). 
+    На шумерском языке древней Месопотамии оно фактически означало "Сияющий". Севернее, в Вавилоне, производное ELLU тоже означало "сияющий", 
+    как и ILU в Аккаде. Распространившись по всей Европе, оно приобрело различные формы: Elf, Ellul, Aelf, AILLI. 
+    Во времена "Темного средневековья" так называли богов, эльфов, ангелов. В гаэльском Корнуолле слово EL было эквивалентом англосаксонского ENGEL 
+    и старофранцузского ANGELE, а в английском языке — ANGEL.
+  </p>
+
+  <p><strong>Ранние релизы группы:</strong></p>
+  <p>
+    2009 год - дебютный ЕР «Непобеждённый судьбой».<br>
+    2010 год - англоязычный ЕР «Stranger».<br>
+    2015 год - полноформатный альбом «Война миров».<br>
+    2018 год - второй альбом «Эра чёрных зеркал».<br>
+    2019 год - синглы: «Не потеряй себя», «Белыми нитями».<br>
+    2020 год – синглы: «В плену систем», «Залечь на дно», «Странник», «Двигаться дальше».<br>
+    2021 год - синглы: «Цель» (feat. Виктор Смольский), «Новый вдох», «Боли нет».
+  </p>
+
+  <p>В разные годы - участие в трибьют-сборниках:</p>
+  <ul>
+    <li>«Vicious Crusade & friends»</li>
+    <li>«Helloray» – посвящён группам Helloween и Gamma Ray, издан в Норвегии</li>
+    <li>«Mastersland – 10 лет в сети»</li>
+    <li>«A Tribute to Мастер. XXV»</li>
+  </ul>
+
+  <!-- Участники группы -->
+  <h1 id="members">Состав группы:</h1>
+  <h2 class="members-list">
+    Константин Дударев — вокал<br>
+    Дмитрий Микулич — гитара<br>
+    Павел Дятко — гитара<br>
+    Александр Стриевич — бас-гитара<br>
+    Александр Прокофьев — барабаны
+  </h2>
+
+  <h1>Об участниках:</h1>
+
+  <div class="member">
+    <img src="images/dudarev.jpg" alt="Фото вокалиста" class="image-right">
+    <h4>Константин Дударев</h4>
+    <p><strong>Вокалист, художник-дизайнер по изготовлению доспехов</strong> в художественной мастерской 
+      <a href="https://sl-armours.com/en/home.html" target="_blank">"Стальное наследие"</a>.
+    </p>
+  </div>
+
+  <div class="member">
+    <img src="images/mikulich.jpg" alt="Фото Микулича" class="image-right">
+    <h4>Дмитрий Микулич</h4>
+    <p><strong>Гитарист, звукорежиссёр, аранжировщик, саунд-продюсер</strong>, основатель музыкального лейбла 
+      <a href="https://goostmusic.com/" target="_blank">Goost Music</a>.
+    </p>
+  </div>
+
+  <div class="member">
+    <img src="images/dyatko.jpg" alt="Фото Дятко" class="image-right">
+    <h4>Павел Дятко</h4>
+    <p><strong>Гитарист, звукорежиссёр</strong>, участник группы 
+      <a href="https://www.metal-archives.com/bands/Among_Your_Gods/3540427520" target="_blank">Among Your Gods</a>.
+    </p>
+  </div>
+
+  <div class="member">
+    <img src="images/strievich.jpg" alt="Фото Стриевича" class="image-right">
+    <h4>Александр Стриевич</h4>
+    <p><strong>Бас-гитара, видеограф</strong>. Работы можно посмотреть на 
+      <a href="https://vimeo.com/user80381007" target="_blank">Vimeo</a>.
+    </p>
+  </div>
+
+  <div class="member">
+    <img src="images/prokofiev.jpg" alt="Фото Прокофьева" class="image-right">
+    <h4>Александр Прокофьев</h4>
+    <p><strong>Барабанщик</strong>. Участник группы 
+      <a href="https://www.metal-archives.com/bands/Among_Your_Gods/3540427520" target="_blank">Among Your Gods</a>.
+    </p>
+  </div>
+
+</body>
+</html>
